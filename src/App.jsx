@@ -72,7 +72,6 @@ function App() {
               element={<UserProfile isAuth={isAuth} username={username} />}
             />
             <Route path="*" element={<ErrorPage />} />
-
             <Route path="error" element={<ErrorPage />} />
           </Route>
         </Routes>
