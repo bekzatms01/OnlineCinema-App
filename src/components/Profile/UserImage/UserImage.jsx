@@ -1,13 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { getDownloadURL, ref, listAll, uploadBytes } from "firebase/storage";
 import { storage } from "../../../config/firebaseConfig";
+import profile from "./profile.png";
 import "./user-image.css";
 
 const UserImage = ({ username }) => {
   const [file, setFile] = useState("");
-  const defaultImage = useRef(
-    "http://cdn.onlinewebfonts.com/svg/img_24787.png"
-  );
   const [pathImage, setPathImage] = useState("");
 
   const storageRef = ref(storage, `files/`);
@@ -46,7 +44,7 @@ const UserImage = ({ username }) => {
       <h2>Profile Picture</h2>
       <div className="thumbnail">
         <img
-          src={pathImage ? pathImage : defaultImage.current}
+          src={pathImage ? pathImage : profile}
           alt={`${username}'s avatar`}
         />
       </div>
