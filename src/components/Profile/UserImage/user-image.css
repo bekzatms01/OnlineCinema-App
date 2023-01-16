@@ -1,0 +1,150 @@
+.user-image {
+	width: 500px;
+	height: 500px;
+	background-color: #fff;
+}
+
+.user-image h2 {
+	color: #b5aaaa;
+	padding: 15px 30px;
+	background-color: #efefef;
+}
+
+.user-image .thumbnail {
+	text-align: center;
+	padding-top: 30px;
+	width: 300px;
+	height: 300px;
+	margin: auto;
+}
+
+.user-image .thumbnail img {
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+}
+
+.user-image .warning {
+	padding-top: 10px;
+	text-align: center;
+}
+.user-image .warning span {
+	color: #545454;
+	font-size: 16px;
+}
+
+.user-image .upload-image {
+	display: flex;
+	justify-content: space-between;
+	margin: 57px 20px 0 20px;
+}
+
+.user-image .upload-image input[type="file"] {
+	display: none;
+}
+
+.user-image .upload-image label,
+.user-image .upload-image button {
+	padding: 10px;
+	background-color: #000;
+	color: #fff;
+	cursor: pointer;
+	border-color: #000;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+/* Mobile and Tablet */
+@media screen and (max-width: 1050px) {
+	.user-image {
+		height: 450px;
+	}
+	.user-image .thumbnail {
+		width: 270px;
+		height: 270px;
+		margin: auto;
+	}
+
+	.user-image .thumbnail img {
+		width: 100%;
+		height: 100%;
+	}
+	.user-image .upload-image {
+		margin: 37px 20px 0 20px;
+	}
+	.user-image .upload-image label,
+	.user-image .upload-image button {
+		padding: 8px 10px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.user-image {
+		height: 550px;
+	}
+	.user-image .thumbnail {
+		width: 350px;
+		height: 350px;
+		margin: auto;
+	}
+
+	.user-image .thumbnail img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.user-image {
+		width: 400px;
+		height: 500px;
+	}
+	.user-image .thumbnail {
+		width: 300px;
+		height: 300px;
+		margin: auto;
+	}
+
+	.user-image .thumbnail img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.user-image {
+		width: 350px;
+		height: 500px;
+	}
+	.user-image .thumbnail {
+		width: 300px;
+		height: 300px;
+		margin: auto;
+	}
+
+	.user-image .thumbnail img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.user-image {
+		width: 300px;
+		height: 380px;
+	}
+	.user-image .thumbnail {
+		width: 200px;
+		height: 200px;
+		margin: auto;
+		padding-top: 20px;
+	}
+
+	.user-image .thumbnail img {
+		width: 100%;
+		height: 100%;
+	}
+	.user-image .upload-image {
+		margin: 37px 20px 0 20px;
+	}
+}

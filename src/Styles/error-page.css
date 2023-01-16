@@ -1,0 +1,17 @@
+.error-page {
+  width: 650px;
+  margin: 200px auto;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.error-page h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.error-page p {
+  margin: 15px 0;
+  line-height: 35px;
+}

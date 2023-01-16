@@ -1,0 +1,47 @@
+.poster-image {
+	/* position: relative;
+	display: table;
+	background-image: url("../../public/images/background.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 80vh; */
+}
+
+.poster-image {
+	width: 100%;
+}
+
+.poster-image img {
+	max-width: 100%;
+}
+
+.home-row {
+	margin: 50px 80px;
+}
+
+.home-row h2 {
+	margin-bottom: 20px;
+}
+
+/* Mobile and Tablet */
+@media screen and (max-width: 1000px) {
+	.home-row {
+		margin: 50px 10px;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.poster-image {
+		width: 100%;
+		height: 400px;
+	}
+	.poster-image img {
+		max-width: 100%;
+		height: 100%;
+	}
+	.home-row h2 {
+		font-size: 24px;
+	}
+}

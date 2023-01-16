@@ -1,0 +1,95 @@
+.detail-info {
+	width: 80%;
+	background-color: #fff;
+	margin-left: 80px;
+	color: #000;
+}
+
+.detail-info h2 {
+	color: #b5aaaa;
+	padding: 15px 30px;
+	background-color: #efefef;
+}
+
+.detail-info form {
+	padding: 20px;
+}
+
+.detail-info form div {
+	padding: 15px 0;
+}
+
+.detail-info form label {
+	margin-bottom: 5px;
+	color: #b5aaaa;
+	font-size: 16px;
+}
+
+.detail-info form input {
+	padding: 14px 8px;
+	width: 100%;
+	border: 1px solid #b5aaaa;
+	border-radius: 6px;
+	margin-top: 5px;
+}
+
+.detail-info .save {
+	padding-top: 17px;
+	padding-bottom: 30px;
+}
+
+.detail-info .save button {
+	padding: 10px;
+	background-color: #000;
+	color: #fff;
+	cursor: pointer;
+	border-color: #000;
+	border-radius: 5px;
+}
+
+/* Mobile and Tablet */
+@media screen and (max-width: 1300px) {
+	.detail-info {
+		width: 100%;
+		margin-left: 40px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.detail-info {
+		margin-top: 50px;
+		margin-left: 0;
+		width: 600px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.detail-info {
+		width: 500px;
+	}
+	.detail-info form input {
+		padding: 10px 8px;
+	}
+}
+
+@media screen and (max-width: 510px) {
+	.detail-info {
+		width: 400px;
+	}
+	.detail-info form {
+		padding: 10px 20px;
+	}
+
+	.detail-info form div {
+		padding: 8px 0;
+	}
+	.detail-info .save {
+		padding-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.detail-info {
+		width: 350px;
+	}
+}

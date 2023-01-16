@@ -1,0 +1,45 @@
+.comment {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	/* align-items: center; */
+}
+
+.comment-info {
+	display: flex;
+	width: 90%;
+	margin-bottom: 32px;
+}
+
+.comment-info .comment-user-img {
+	margin-right: 8px;
+}
+
+.comment-info .comment-detail .comment__author {
+	margin-bottom: 5px;
+	font-size: 22px;
+}
+
+.comment-info .comment-detail .comment__date {
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.comment-info .comment-detail .comment__text {
+	font-size: 22px;
+}
+
+.comment-delete {
+	font-size: 30px;
+	cursor: pointer;
+}
+
+/* Mobile and tablet */
+@media screen and (max-width: 600px) {
+	.comment-info .comment-detail .comment__text {
+		font-size: 16px;
+	}
+	.comment-delete {
+		font-size: 20px;
+	}
+}

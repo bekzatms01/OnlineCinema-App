@@ -1,0 +1,18 @@
+.thumbnail li {
+	margin: 0 20px;
+}
+
+.thumbnail li:first-child {
+	margin-left: 0;
+}
+
+/* Mobile and Tablet */
+@media screen and (max-width: 800px) {
+	.thumbnail li {
+		margin: 0 10px;
+	}
+
+	.thumbnail li:first-child {
+		margin-left: 0;
+	}
+}
