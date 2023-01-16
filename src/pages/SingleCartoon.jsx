@@ -15,7 +15,6 @@ const SingleCartoon = ({ isAuth }) => {
       navigate("/error");
     }
     const data = await response.json();
-    console.log(data);
     setCartoon(data);
   };
 

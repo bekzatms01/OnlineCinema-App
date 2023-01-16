@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import TryLater from "../components/TryLater/TryLater";
 import Pagination from "../components/Pagination/Pagination";
 import MovieItem from "../components/Movie/MovieItem";
@@ -9,10 +9,13 @@ import "../Styles/container.css";
 const Cartoons = () => {
   const [searchParams] = useSearchParams();
   const [error, setError] = useState(false);
-  const [numberOfPages, setNumberOfPages] = useState(5);
+  const numberOfPages = useRef(5);
   const lastURL = `&field=typeNumber&search=3&sortField[]=rating.kp&sortType[]=-1&limit=20&token=${process.env.REACT_APP_TOKEN}`;
-  const {docs, page, nextPage,prevPage} = usePaginate(process.env.REACT_APP_URL_FOR_MOVIES, searchParams, lastURL)
-  
+  const { docs, page, nextPage, prevPage } = usePaginate(
+    process.env.REACT_APP_URL_FOR_MOVIES,
+    searchParams,
+    lastURL
+  );
 
   useEffect(() => {
     if (!docs) {
@@ -20,10 +23,9 @@ const Cartoons = () => {
     }
   }, [docs]);
 
-
   let arr = [];
-  if (numberOfPages) {
-    for (let i = 1; i <= numberOfPages; i++) {
+  if (numberOfPages.current) {
+    for (let i = 1; i <= numberOfPages.current; i++) {
       arr.push(i);
     }
   }

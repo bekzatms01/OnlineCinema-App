@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import UserImage from "../components/Profile/UserImage/UserImage";
 import UserInfos from "../components/Profile/UserInfos/UserInfos";
 import { auth, db } from "../config/firebaseConfig";
-import {collection, getDocs} from 'firebase/firestore'
+import { collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import "../Styles/user-profile.css";
 
-const UserProfile = ({isAuth, username}) => {
+const UserProfile = ({ isAuth, username }) => {
   const navigate = useNavigate();
 
   const [info, setInfo] = useState({
@@ -14,10 +14,10 @@ const UserProfile = ({isAuth, username}) => {
     firstName: "",
     lastName: "",
     phoneNumber: "",
-    birthday: ""
-  })
+    birthday: "",
+  });
 
-  const usersCollectionRef = collection(db, 'users');
+  const usersCollectionRef = collection(db, "users");
   const [userId, setUserId] = useState("");
 
   const getUserInfo = async () => {
@@ -26,32 +26,32 @@ const UserProfile = ({isAuth, username}) => {
       return { ...doc.data(), id: doc.id };
     });
 
-
     const arr = [];
-    for (let i=0; i<obj.length; i++) {
+    for (let i = 0; i < obj.length; i++) {
       if (obj[i].author.id === auth.currentUser.uid) {
-        arr.push((obj[i].info));
+        arr.push(obj[i].info);
         setUserId(obj[i].id);
       }
     }
 
-    if (arr.length > 0){
-      setInfo(arr[0])
+    if (arr.length > 0) {
+      setInfo(arr[0]);
     }
-  }
+  };
 
   useEffect(() => {
     if (!isAuth) {
       navigate("/login");
     }
     getUserInfo();
-  }, [])
-
+  }, []);
 
   return (
     <div className="user-profile" style={{ color: "white" }}>
-      <UserImage username={username}/>
-      {Object.keys(info).length > 0 && <UserInfos info={info} setInfo={setInfo} id={userId}/> }      
+      <UserImage username={username} />
+      {Object.keys(info).length > 0 && (
+        <UserInfos info={info} setInfo={setInfo} id={userId} />
+      )}
     </div>
   );
 };
